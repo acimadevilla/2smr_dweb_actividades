@@ -1,0 +1,87 @@
+/*DEFINICIÓN DE VARIABLES DE COLORES*/
+:root {
+    --primary-color: #076896;
+    --primary-color_transparencia: #07689666;
+    --boton_activo:	#004466;
+}
+
+body {
+    font-family: Arial, sans-serif;    
+    line-height: 1.4;
+}
+
+header, main, footer {    
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-bottom: 8px;
+    border-radius: 0 0 4px 4px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+    box-shadow: 0 0.2rem 0.2rem rgb(4, 28, 54);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    padding:  0.3rem 0.6rem;    
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+section {
+    background-color: white;
+    box-shadow: 0 2px 4px rgb(65, 59, 59);
+    border-radius: 8px;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Pseudoclases*/
+.btn, .btn-sec {
+   /*border: 2px solid #006699;*/
+   border: 2px solid var(--primary-color);
+   border-radius: 4px;
+   background-color: white;
+   padding: 0.4rem 0.8rem;
+   margin: 0.3rem 0.3rem 0.6rem 0;
+   color: var(--primary-color);
+   text-decoration: none;
+   cursor: pointer;
+}
+.btn:hover, .btn-sec:hover   {
+    background-color: var(--primary-color_transparencia);
+    transition:  background-color 0.5s;
+}
+
+.btn:active, .btn-sec:active   {
+    background-color: var(--boton_activo);
+}
+
+input {
+    border: 1px solid #999;
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+
+
