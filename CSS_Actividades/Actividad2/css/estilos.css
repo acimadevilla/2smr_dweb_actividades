@@ -3,6 +3,9 @@
     --primary-color: #076896;
     --primary-color_transparencia: #07689666;
     --boton_activo:	#004466;
+    --color-fondo_caja: #eaf6fb;
+    --color-borde-caja: #006699;
+    --secondary-color: #f0fff0;
 }
 
 body {
@@ -80,8 +83,73 @@ input {
 }
 
 input:focus {
-    outline: 1px solid var(--primary-color);
+    outline: 1px solid var(--primary-color);    
 }
+
+/* Estilos para la lista */
+
+/*  */
+.lista-demo { 
+    margin-top: 0.8rem;
+    padding-left: 1.2rem;
+}
+
+.lista-demo li {
+    margin: 0.2rem 0;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.lista-demo li:first-child {
+    font-weight: bold;
+    color: var(--boton_activo);
+    opacity: 1;
+}
+
+.lista-demo li:hover {
+    opacity: 1;
+}
+
+/* Caja	(.caja):
+fondo	azul	claro	(#eaf6fb),	
+borde	3px	sólido	#006699,	
+bordes	redondeados	(8px),	
+con	1rem	de	margen	
+y	1rem	de	relleno. */
+.caja {
+    background-color: var(--color-fondo_caja);
+    border: 3px solid var(--color-borde-caja);
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/* span	que	es	hijo directo	de	#contenedor	
+fondo azul muy claro (#d0f0f5),	
+borde	1px	sólido	#006699,	
+relleno 0.3rem,	
+margen	inferior	0.3rem */
+#contenedor > span {
+    /* inline-block: Para que podamos ponerle margen 
+    - propiedades de dimensiones  */
+    display: inline-block;
+    background-color: var(--color-fondo_caja);
+    border: 1px solid var(--color-borde-caja);
+    padding: 0.3rem;
+    margin-bottom: 1.3rem;
+}
+
+/* párrafo hermano	inmediato	de	#contenedor →	
+fondo	verde	claro	(#f0fff0),	
+borde	izquierdo	4px	sólido	verde,	
+relleno	izquierdo 0.4rem */
+#contenedor + p {
+    background-color: var(--secondary-color);
+    border-left: 4px solid green;
+    padding-left: 0.4rem;
+}
+
+
 
 
 
