@@ -6,6 +6,7 @@
     --color-fondo_caja: #eaf6fb;
     --color-borde-caja: #006699;
     --secondary-color: #f0fff0;
+    --color-borde-redondeado: #333;
 }
 
 body {
@@ -149,6 +150,70 @@ relleno	izquierdo 0.4rem */
     padding-left: 0.4rem;
 }
 
+/* Aplicar estilos comunes a las cajas
+  Tamaño:	ancho	100px,	
+  alto	80px,	
+  borde	3px	sólido	#333,	
+  texto	centrado	vertical	y	horizontal.
+  */
+.box {
+    float: left;
+    width: 100px;
+    height: 80px;
+    border: 3px solid var(--color-borde-redondeado);
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;   
+    margin-right: 20px;
+}
+
+/*.b1	→	fondo	rojo	claro	(#ff9999),	
+olo	esquina	superior	izquierda	redondeada	(16px).  */
+
+.b1 {
+    background-color: #ff9999;
+    border-radius: 16px 0 0 0;
+
+}
+/*.b2	→	fondo	amarillo	(#ffcc66),	
+solo	esquina	superior	derecha	redondeada	(16px).
+		  */
+.b2 {
+    background-color: #ffcc66;
+    border-top-right-radius: 16px ;
+}
+
+
+/*  - .b3	→	fondo	verde	claro	(#99cc99
+todas	las	esquinas	redondeadas	(16px).*/
+.b3 {
+    background-color: #99cc99;    
+    border-radius: 16px;
+}
+
+
+.fila::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* FOOTER
+    Texto alineado en el centro
+    fondo claro
+    borde superior
+    letra más pequeña que la original */
+
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #eee;
+    padding: 1rem;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 8px 8px 0 0;    
+}
 
 
 
