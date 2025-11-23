@@ -111,9 +111,23 @@
   .muted{ color: var(--muted); }
 
   .section{
+    background:
+      radial-gradient(1200px 400px at 10% -20%, rgba(34,211,238,.25), transparent 60%),
+      radial-gradient(1200px 400px at 90% 120%, rgba(14,165,233,.25), transparent 60%),
+      linear-gradient(135deg, rgba(14,165,233,.25), rgba(34,211,238,.15));
     margin-top: 26px;
     display: grid;
     gap: 14px;
+    border: 0.4;
+  }
+
+  .article {
+    background-attachment: fixed;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    padding: 1rem;
+    box-shadow: 0 0.2rem 0.2rem rgb(4, 28, 54);
   }
 
   /* ========= List of activities ========= */

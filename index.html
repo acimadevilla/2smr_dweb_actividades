@@ -16,7 +16,7 @@
 <body>
   <div class="container">
     <!-- HERO -->
-    <header class="hero">
+    <header class="hero" id="home">
       <div class="hero-inner">
         <img class="avatar" src="./img/avatar2.jpg" alt="Dibujo de una persona con aspecto agotado delante de un ordenador" title="Programador web">
         <div>
@@ -25,7 +25,7 @@
           <small class="muted">Actividades de aula y repositorios de alumnado</small>
           <nav>
             <ul>
-              <li><a href="#" aria-current="page">RA1 · Prácticas HTML</a></li>
+              <li><a href="#ActHTML" aria-current="page">RA1 · Prácticas HTML</a></li>
               <li><a href="#">RA2 · Prácticas CSS</a></li>
               <li><a href="#">RA3 · Prácticas JavaScript</a></li>
             </ul>
@@ -33,8 +33,9 @@
         </div>
       </div>
     </header>
-    <section>
+    <section >
       <nav><ul>
+        <li><a href="#home">Inicio</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#repos" rel="noreferer">Repos de Alumnos</a></li>
       </ul>
@@ -48,7 +49,7 @@
           <p class="muted">Aquí puedes consultar todas las actividades de aprendizaje de HTML.</p>
         </header>
         <article class="article">
-          <h2>Actividades de HTML <span class="muted">[RA1]</span></h2>
+          <h2 id="ActHTML">Actividades de HTML <span class="muted">[RA1]</span></h2>
           <ul class="links">
             <li><a href="./HTML_Actividades/Actividad1/Actividad1.html">Actividad 1: Primeras etiquetas…</a></li>
             <li><a href="./HTML_Actividades/Actividad2">Actividad 2: Etiquetas <code>&lt;h1&gt; &lt;h2&gt; &lt;br&gt; &lt;em&gt; &lt;strong&gt;</code> …</a></li>
@@ -57,9 +58,13 @@
             <li><a href="./HTML_Actividades/Actividad 5/Ej5-Solucion.html">Actividad 5. Formularios.</a></li>
           </ul>
         </article>
-        <article>
-          <h2>Actividades de CSS <span class="muted">[RA1]</span></h2>
-
+        <article class="article">
+          <h2 id="ActCSS">Actividades de CSS <span class="muted">[RA2]</span></h2>
+          <ul class="links">
+            <li><a href="./CSS_Actividades/Actividad1/Actividad1.html">Actividad 1: Introducción a CSS</a></li>
+            <li><a href="./CSS_Actividades/Actividad2/CSS_Actividad2.html">Actividad 2: Pseudoclases, selectores, ... <code>&lt;h1&gt; &lt;h2&gt; &lt;br&gt; &lt;em&gt; &lt;strong&gt;</code> …</a></li>
+           
+          </ul>
         </article>
       </section>
      
