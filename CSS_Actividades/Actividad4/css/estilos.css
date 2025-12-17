@@ -9,7 +9,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.mi_header {
+    background-image: url(../img/fondo_header.jpg);
+}
 /* contenedores navegación y section */
 .mi_contenedor {
     width: 90%;
