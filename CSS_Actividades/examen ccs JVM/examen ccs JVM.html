@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen RA1 y RA2 - Jorge Vázquez Monterroso</title>
+    <style>
+        :root {
+            --color-bg-dark: #1a1a1a;
+            --color-bg-section: #242323;
+            --color-surface-light: #afa8be;
+            --color-accent: #8b5cf6;
+            --color-accent-alt: #9873ee;
+            --color-text-main: #f0f0f0;
+            --color-accent-shadow: rgba(139, 92, 246, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--color-bg-section);
+            border-bottom: 3px solid var(--color-accent);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-text-main);
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--color-accent);
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .seccion-uno {
+            background-color: var(--color-bg-section);
+            width: 90%;
+            max-width: 1200px;
+            padding: 30px 24px;
+            margin-top: 24px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .bloque-texto {
+            flex: 1;
+        }
+
+        .bloque-texto h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .bloque-texto p {
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .bloque-registro {
+            width: 320px;
+            flex-shrink: 0;
+            background-color: var(--color-bg-dark);
+            border: 2px solid var(--color-accent);
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .bloque-registro h3 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: white;
+            outline: none;
+        }
+
+        .btn-crear {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--color-accent);
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .seccion-dos {
+            margin-top: 40px;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .seccion-dos h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid gray;
+            width: 70%;
+        }
+
+        .galeria {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .card {
+            width: 30%;
+            background-color: var(--color-surface-light);
+            color: #222;
+            border: 1px solid gray;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 5px 5px 8px 2px var(--color-accent-shadow);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #00ff88;
+        }
+
+        .card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 5px;
+            font-size: 1rem;
+            color: #111;
+        }
+
+        .rating {
+            color: #6d28d9;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .descrip {
+            font-size: 0.8rem;
+            text-align: center;
+            color: #333;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .btn-ver {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--color-accent);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-ver:hover {
+            background-color: var(--color-accent-alt);
+        }
+
+        footer {
+            height: 80px;
+            background-color: var(--color-bg-section);
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        footer a {
+            color: var(--color-accent);
+            text-decoration: none;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body id="inicio">
+
+    <header>
+        <div>
+            <h1>SERIES FAN RATING</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Series</a></li>
+                <li><a href="#">Comunidad</a></li>
+                <li><a href="https://www.iesmedinaazahara.es/" target="_blank">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="seccion-uno">
+            
+            <article class="bloque-texto">
+                <h2>Valora tus series favoritas</h2>
+                <p>Descubre qué opinan otros fans, comparte reseñas y sube al ranking tus series de televisión preferidas.</p>
+            </article>
+
+            <aside class="bloque-registro">
+                <h3>Únete a la comunidad</h3>
+                <form action="#" method="post">
+                    <div class="campo">
+                        <label>Nombre de usuario</label>
+                        <input type="text" placeholder="Tu nick">
+                    </div>
+                    <div class="campo">
+                        <label>Correo electrónico</label>
+                        <input type="password" placeholder="tucorreo@ejemplo.com">
+                    </div>
+                    <button type="submit" class="btn-crear">Crear cuenta</button>
+                </form>
+            </aside>
+
+        </section>
+
+        <section class="seccion-dos">
+            <h2>Series mejor valoradas por los fans</h2>
+            
+            <div class="galeria">
+                <article class="card">
+                    <img src="img/pluribus.jpg" alt="Pluribus">
+                    <h3>Pluribus</h3>
+                    <div class="rating">★ 4.7 / 5</div>
+                    <p class="descrip">Thriller político de ciencia ficción donde múltiples realidades se cruzan en una lucha por el poder.</p>
+                    <button class="btn-ver">Ver detalles</button>
+                </article>
+
+                <article class="card">
+                    <img src="img/stranger-things.jpg" alt="Stranger Things">
+                    <h3>Stranger Things</h3>
+                    <div class="rating">★ 4.8 / 5</div>
+                    <p class="descrip">Misterio, amistad y terror ochentero en Hawkins, con criaturas del Mundo del Revés.</p>
+                    <button class="btn-ver">Ver detalles</button>
+                </article>
+
+                <article class="card">
+                    <img src="img/fallout.jpeg" alt="Fallout">
+                    <h3>Fallout</h3>
+                    <div class="rating">★ 4.5 / 5</div>
+                    <p class="descrip">Adaptación del famoso videojuego, en un mundo postapocalíptico lleno de radiación y humor negro.</p>
+                    <button class="btn-ver">Ver detalles</button>
+                </article>
+
+                 <article class="card">
+                    <img src="img/last-of-us.jpg" alt="The Last of Us">
+                    <h3>The Last of Us</h3>
+                    <div class="rating">★ 4.9 / 5</div>
+                    <p class="descrip">Drama donde Joel y Ellie intentan sobrevivir a una pandemia.</p>
+                    <button class="btn-ver">Ver detalles</button>
+                </article>
+
+                <article class="card">
+                    <img src="img/sandman.jpg" alt="Sandman">
+                    <h3>Sandman</h3>
+                    <div class="rating">★ 4.6 / 5</div>
+                    <p class="descrip">Sueño, una de las entidades eternas, escapa tras décadas de cautiverio y debe restaurar su reino mientras enfrenta amenazas que afectan al mundo humano y al onírico.</p>
+                    <button class="btn-ver">Ver detalles</button>
+                </article>
+
+                <article class="card">
+                    <img src="img/andor.jpg" alt="Andor">
+                    <h3>Andor</h3>
+                    <div class="rating">★ 4.7 / 5</div>
+                    <p class="descrip">Sigue la transformación de Cassian Andor desde un ladrón sin rumbo hasta convertirse en un agente clave de la Rebelión contra el Imperio.</p>
+                    <button class="btn-ver">Ver detalles</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2025 Series Fan Rating <a href="#inicio">Volver arriba</a></p>
+    </footer>
+
+</body>
+</html>

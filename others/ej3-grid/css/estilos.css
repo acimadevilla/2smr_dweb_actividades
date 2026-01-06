@@ -1,0 +1,40 @@
+/* Contenedor principal: FLEX con salto de línea */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;      /* Permite varias filas */
+  gap: 20px;            /* Separación entre bloques */
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* Header ocupa toda la fila */
+.cabecera {
+  flex: 0 0 100%;       /* 100% del ancho */
+  background: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Footer ocupa toda la fila */
+.pie {
+  flex: 0 0 100%;       /* 100% del ancho */
+  background: #f9dede;
+  padding: 20px;
+}
+
+/* Barras laterales y contenido central */
+
+/* Barras laterales: más estrechas */
+.barra_lateral_izq,
+.barra_lateral_derecha {
+  flex: 0 0 15%;        /* 15% cada una */
+  background: #d3d3d3;
+  padding: 20px;
+}
+
+/* Contenido central: más ancho */
+.main {
+  flex: 0 0 70%;        /* 70% del ancho */
+  background: #e1e1e1;
+  padding: 20px;
+}
