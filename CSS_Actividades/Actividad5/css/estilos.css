@@ -50,7 +50,9 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  border-bottom: #ddd;
+  border-bottom: solid 2px #242323;
+  padding: 5px;
+  margin-bottom: 15px;
 }
  .avatar {
   max-width: 75px;
