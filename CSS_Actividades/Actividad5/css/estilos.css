@@ -16,16 +16,21 @@
    padding: 20px;
  }
 
+ .section_form {
+  display: flex;
+  justify-content: center;
+ }
+
  form {
    display: grid;
    gap: 10px;
-   max-width: 560px;
+   max-width: 760px;
  }
 
  .fila {
    display: grid;
    gap: 8px;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr 2fr;
  }
 
  label {
@@ -38,6 +43,13 @@
  button {
    padding: 10px;
    font: inherit;
+   border: grey;
+   border-radius: 8px;
+ } 
+ button {
+  background-color: rgb(130, 130, 231);
+  color: white;
+  font-size: 1.5rem;
  }
 
  .tarea-wrap {
@@ -129,4 +141,9 @@
  .pill {
    font-size: 12px;
    opacity: .7;
+ }
+ 
+ footer section{
+  display: flex;
+  justify-content: center;
  }

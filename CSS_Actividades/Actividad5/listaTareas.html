@@ -5,12 +5,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tareas del hogar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="./css/estilos.css">
 </head>
 
 <body>
   <header>
-    <h1 class="titulo">iHouseWorkss</h1>
+    <h1 class="titulo">iHouseWorks</h1>
   </header>
   <main>
     <section class="section_form">
@@ -19,7 +20,7 @@
           <label>
             Miembro
             <select id="miembro">
-              <option value="" selected disabled>Elige…</option>
+              <option value="" selected disabled>Elige persona...</option>
               <option>Vera</option>
               <option>Pablo</option>
               <option>Papá</option>
@@ -30,7 +31,7 @@
             Tarea (elige o escribe una nueva)
             <div class="tarea-wrap">
               <select id="tareaSelect">
-                <option value="" selected disabled>Elige…</option>
+                <option value="" selected disabled>Elige tarea…</option>
                 <option>Tender la ropa</option>
                 <option>Poner lavadora</option>
                 <option>Sacar la basura</option>
@@ -38,18 +39,25 @@
               </select>
               <input id="tareaNueva" type="text" placeholder="Otra tarea…" />
             </div>
-            <span class="pill">Si escribes una tarea nueva, se guardará como opción.</span>
-          </label>
+           </label>
         </div>
 
-        <button type="submit">Añadir</button>
+        <button type="submit"><!-- Signo más dentro de un círculo -->
+          <i class="fa-solid fa-circle-plus"></i> Añadir
+        </button>
       </form>
     </section>
 
 
     <section id="contenedorFamilia" class="familia" aria-live="polite"></section>
   </main>
+  <footer> 
+    <section>
+      <p>By &copy; Alejandro Cimadevilla Estradera</p>
+      </section>
+    </footer>
   <script src="js/script.js"></script>
+
 
 </body>
 
