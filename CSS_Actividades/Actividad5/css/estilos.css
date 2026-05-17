@@ -1,8 +1,16 @@
  body {
+     display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+   
    font-family: system-ui, Arial;
    padding: 16px;
    background-color: #242323;
    color: #ddd;
+ }
+
+ main {
+  flex: 1;
  }
  .titulo {
   font-size: 3.2rem;
