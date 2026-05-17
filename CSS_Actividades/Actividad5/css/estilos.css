@@ -1,8 +1,8 @@
  body {
-     display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-   
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   gap: 10px;
    font-family: system-ui, Arial;
    padding: 16px;
    background-color: #242323;
@@ -10,11 +10,12 @@
  }
 
  main {
-  flex: 1;
+   flex: 1;
  }
+
  .titulo {
-  font-size: 3.2rem;
-  text-align: center;
+   font-size: 3.2rem;
+   text-align: center;
  }
 
  section {
@@ -25,8 +26,8 @@
  }
 
  .section_form {
-  display: flex;
-  justify-content: center;
+   display: flex;
+   justify-content: center;
  }
 
  form {
@@ -53,11 +54,12 @@
    font: inherit;
    border: grey;
    border-radius: 8px;
- } 
+ }
+
  button {
-  background-color: rgb(130, 130, 231);
-  color: white;
-  font-size: 1.5rem;
+   background-color: rgb(130, 130, 231);
+   color: white;
+   font-size: 1.5rem;
  }
 
  .tarea-wrap {
@@ -66,17 +68,18 @@
    grid-template-columns: 1fr 1fr;
  }
 
-.contenedor_avatar {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  border-bottom: solid 2px #242323;
-  padding: 5px;
-  margin-bottom: 15px;
-}
+ .contenedor_avatar {
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   border-bottom: solid 2px #242323;
+   padding: 5px;
+   margin-bottom: 15px;
+ }
+
  .avatar {
-  max-width: 75px;
-  border-radius: 8px;
+   max-width: 75px;
+   border-radius: 8px;
  }
 
  .familia {
@@ -150,8 +153,8 @@
    font-size: 12px;
    opacity: .7;
  }
- 
- footer section{
-  display: flex;
-  justify-content: center;
+
+ footer section {
+   display: flex;
+   justify-content: center;
  }
